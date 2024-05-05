@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, StyleSheet, View } from 'react-native'
 
-export default function Home({navigation}) {
+export default class Profile extends Component {
+  render() {
     return (
       <View>
-        <Button
-        title="about"
-        onPress={() => navigation.navigate('About')}
-      />
+        <Text> profil </Text>
       </View>
     )
   }
+}
 
+const styles = StyleSheet.create({})

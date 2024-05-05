@@ -1,16 +1,14 @@
-import React, {TouchableOpacity, Component } from 'react'
-import { Text, View, Button } from 'react-native'
+import React, { Component } from 'react'
+import { Text, StyleSheet, View } from 'react-native'
 
-export default function Home({navigation}) {
+export default class Home extends Component {
+  render() {
     return (
       <View>
-        
-        <Button
-        title="Profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
+        <Text> Home </Text>
       </View>
     )
   }
-  
+}
 
+const styles = StyleSheet.create({})

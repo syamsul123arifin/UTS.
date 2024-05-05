@@ -14,9 +14,9 @@ const Tab = createBottomTabNavigator();
 function MainTab(){
   return(
     <Tab.Navigator>
-    <Tab.Screen name="Home" component={Home} />
-    <Tab.Screen name="About" component={About} />
-    <Tab.Screen name="Profile" component={Profile} />
+    <Tab.Screen name="Home" component={Home} options={{headerShown: false}}/>
+    <Tab.Screen name="About" component={About} options={{headerShown: false}}/>
+    <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
     
 
   </Tab.Navigator>
@@ -26,41 +26,12 @@ function MainTab(){
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} 
-         options={{
-          title: 'home',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            
-          },
-        }}/>
-        <Stack.Screen name="Profile" component={Profile}
-         options={{
-          title: 'Profile',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }} />
-        <Stack.Screen name="About" component={About}
-         options={{
-          title: 'About',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }} />
+      <Stack.Navigator>
+      <Stack.Screen
+      name='MainTab'
+      component={MainTab}
+      options={{headerShown: false}}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   );
