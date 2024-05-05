@@ -6,8 +6,8 @@ export default function Home({navigation}) {
       <View>
         
         <Button
-        title="Details"
-        onPress={() => navigation.navigate('Details')}
+        title="Profile"
+        onPress={() => navigation.navigate('Profile')}
       />
       </View>
     )
