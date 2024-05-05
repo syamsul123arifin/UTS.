@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Button } from 'react-native'
 
-export default class Details extends Component {
-  render() {
+export default function Home({navigation}) {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Button
+        title="about"
+        onPress={() => navigation.navigate('About')}
+      />
       </View>
     )
   }
-}
+

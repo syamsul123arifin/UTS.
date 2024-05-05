@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React, {TouchableOpacity, Component } from 'react'
+import { Text, View, Button } from 'react-native'
 
-export default class Home extends Component {
-  render() {
+export default function Home({navigation}) {
     return (
       <View>
-        <Text>home </Text>
+        
+        <Button
+        title="Details"
+        onPress={() => navigation.navigate('Details')}
+      />
       </View>
     )
   }
-}
+
